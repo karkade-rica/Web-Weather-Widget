@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виджет погоды</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-cloud-sun"></i> Погода сейчас</h1>
+        <p class="subtitle">Узнайте текущую погоду в любом городе мира</p>
+        
+        <div class="weather-card">
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Введите название города...">
+                <button id="search-btn"><i class="fas fa-search"></i> Найти</button>
+            </div>
+            
+            <div class="loading" id="loading">Загрузка данных о погоде...</div>
+            <div class="error" id="error"></div>
+            
+            <div class="weather-info" id="weather-info">
+                <h2 class="city-name" id="city-name">Москва</h2>
+                <div class="weather-icon" id="weather-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="temperature" id="temperature">24°C</div>
+                <div class="weather-description" id="weather-description">Солнечно</div>
+                
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-low"></i>
+                        <span class="detail-value" id="feels-like">22°C</span>
+                        <span class="detail-label">Ощущается как</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <span class="detail-value" id="humidity">65%</span>
+                        <span class="detail-label">Влажность</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <span class="detail-value" id="wind-speed">3.6 м/с</span>
+                        <span class="detail-label">Скорость ветра</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="default-cities">
+            <div class="default-city" data-city="Москва">Москва</div>
+            <div class="default-city" data-city="Санкт-Петербург">Санкт-Петербург</div>
+            <div class="default-city" data-city="Новосибирск">Новосибирск</div>
+            <div class="default-city" data-city="Екатеринбург">Екатеринбург</div>
+            <div class="default-city" data-city="Казань">Казань</div>
+            <div class="default-city" data-city="Лондон">Лондон</div>
+            <div class="default-city" data-city="Париж">Париж</div>
+            <div class="default-city" data-city="Нью-Йорк">Нью-Йорк</div>
+        </div>
+        
+        <div class="footer">
+            Данные предоставлены сервисом <a href="https://openweathermap.org" style="color: #a8d0ff;" target="_blank">OpenWeatherMap</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
